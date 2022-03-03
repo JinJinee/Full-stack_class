@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function(){
+		// 상태 선택자
+		
+		// 속성값이 text인 객체를 선택하기
+		$(":text").css("width", "300px").css("height", "40px");
+		
+		// checked 속성에 대한 선택자 - checked 속성이 설정되어 있을 때 해제한다.
+		$(":checked").prop("checked", false);
+		//$(":checked").attr("checked", false);
+		
+		$(":selected").attr("selected", false);
+		
+		//--------------------------------------------------------------------
+		// 컨텐츠 선택자
+		// contains() : 특정문자를 포함한 경우 선택한다.
+		$("p:contains('박근혜 전 대통령')").css("background-color", "pink");
+		
+		// has() : 특정태그를 포한한 경우 선택한다.
+		$("p:has('b')").css("border", "2px solid red");
+		
+		// not() : 특정 선택자를 제외한 나머지를 선택한다.
+		$("p:not(:first)").css("color", "green");
+		
+		// closest() : 조상선택자
+		$("i").closest("body").css("border", "3px solid #ddd");
+		
+		// filter
+		$("p").filter('.c1').css("color", "#fff").css("background-color", "#000");
+		
+		// contents() : 특정선택자의 하위가 다른 태그가 포함된 경우 선택자
+		$("p").contents().css("color", "red");
+		
+	});
+</script>
+
+</head>
+<body>
+<div>
+	<p>20대 대통령 선거를 한 달도 채 남기지 않은 가운데 <b>박근혜 전 대통령</b>의 ‘대구 사저’가 정치권의 관심사로 떠올랐다. 삼성서울병원에서 입원 치료를 받고 있는 박 전 대통령은 퇴원하는 대로 대구 달성군 유가읍 쌍계리 사저로 내려가 머물 것으로 알려졌다. 박 전 대통령을 대리하는 유영하 변호사가 쌍계리의 단독 주택을 매입한 사실이 알려진 이후 이곳에는 하루에 1000여명에 가까운 박 전 대통령 지지자가 몰리고 있다.</p>
+	<p class="c1">‘대구 사저’는 박 전 대통령의 두 번째 사저다. 취임 전 서울 삼성동 자택에 거주했던 박 전 대통령은 취임과 함께 삼성동 자택을 팔았다. 이후 내곡동에 새 집을 마련했는데, 내곡동 자택은 퇴임 이후 공매로 넘어갔다. 국정원 특수활동비 불법 사용 혐의 등이 대법원 유죄 확정 판결이 나면서 벌금과 추징금을 내지 못하자 내곡동 자택이 공매로 넘어간 것이다.</p>
+	<p class="c1">20대 대통령 선거를 한 달도 채 남기지 않은 가운데 <i>박근혜 전 대통령</i>의 ‘대구 사저’가 정치권의 관심사로 떠올랐다. 삼성서울병원에서 입원 치료를 받고 있는 박 전 대통령은 퇴원하는 대로 대구 달성군 유가읍 쌍계리 사저로 내려가 머물 것으로 알려졌다. 박 전 대통령을 대리하는 유영하 변호사가 쌍계리의 단독 주택을 매입한 사실이 알려진 이후 이곳에는 하루에 1000여명에 가까운 박 전 대통령 지지자가 몰리고 있다.</p>
+</div>
+<div>
+	<form>
+		<label>이름</label>
+		<input type="text" name="username" id="username"/><br>
+		<label>연락처</label>
+		<input type="text" name="tel" id="tel"/> <br>
+		<label>사용자 동의 여부</label>
+		<input type="radio" name="accept" value="yes" checked>동의
+		<input type="radio" name="accept" value="no" >비동의<br>
+		<label>자주가는 사이트</label>
+		<select name="site" id="site">
+			<option value="not">==직접선택==</option>
+			<option value="daum" selected>daum.net</option>
+			<option value="nate">nate.com</option>
+			<option value="naver">naver.com</option>
+		</select>
+		
+	</form>
+
+</div>
+
+</body>
+</html>

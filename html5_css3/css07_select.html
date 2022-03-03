@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/*
+		구조선택자
+		2n : 짝수번째 객체, 2n+1 : 홀수번째 객체, 3n : 3의 배수의 번째 객체선택
+		:nth-child(n)
+	*/
+	#lst>li:nth-child(2n+1){
+		background:pink;
+	}
+	#lst>li:first-child{
+		color:orange;
+	}
+	#lst>li:last-child{
+		color:gray;
+		font-size:1.2em;
+	}
+	
+	/*그림자 설정*/
+	#lst>li{
+		font-size:1.2em;
+		margin-bottom:30px;
+		border:1px solid #ddd;
+	}
+	/*박스 또는 글자에 그림자표시*/
+	#lst>li{
+	/*            오른쪽 아래쪽 투명 색상*/
+		box-shadow:10px 5px 5px #ddd;
+	}
+	#lst>li{
+		text-shadow:5px 5px 5px green;
+	}
+	#txt{
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#3b679e+0,2b88d9+42,7db9e8+100 */
+		background: #3b679e; /* Old browsers */
+		background: -moz-linear-gradient(45deg,  #3b679e 0%, #2b88d9 42%, #7db9e8 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(45deg,  #3b679e 0%,#2b88d9 42%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(45deg,  #3b679e 0%,#2b88d9 42%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b679e', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	}
+	
+</style>
+</head>
+<!-- 
+	html속성
+	oncontextmenu="return false" : 마우스 오른쪽키 사용제어
+	
+	onselectstart : 선택시작 불가능
+	
+	ondragstart : 드래그 시작 불가능
+ -->
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+<ul id="lst">
+	<li>맨드라미</li>
+	<li>장미</li>
+	<li>코스모스</li>
+	<li>민들레</li>
+	<li>해바라기</li>
+	<li>히야신스</li>
+	<li>민들레2</li>
+	<li>해바라기2</li>
+	<li>히야신스2</li>
+</ul>
+<style>
+	/*구조선택자
+		:first-of-type : 처음객체
+		:last-of-type : 마지막객체
+		:nth-of-type(2n) : 2n짝수번째, 2n+1홀수번째 객체 
+	*/
+	#lst2>li:nth-of-type(2n){
+		background:yellow;
+	}
+	#lst2>li:nth-of-type(2n+1){
+		background:orange;
+	} 
+	#lst2>li:first-of-type{
+		font-size:2em;
+	}
+	#lst2>li:last-of-type{
+		color:green;
+	}
+</style>
+
+<ul id="lst2">
+	<li>맨드라미</li>
+	<li>장미</li>
+	<li>코스모스</li>
+	<li>민들레</li>
+	<li>해바라기</li>
+	<li>히야신스</li>
+	<li>민들레2</li>
+	<li>해바라기2</li>
+	<li>히야신스2</li>
+</ul>
+
+<style>
+	/*텍스트 스타일*/
+	/*
+		::first-letter -> 문단의 첫번째 문자에 스타일 적용
+		::first-line -> 첫째줄에 적용하는 스타일
+		::selection -> 선택한 문자의 스타일
+	*/
+	#txt::first-letter{
+		font-size:2em;
+		background:pink;
+		font-weight:bold;
+		color:white;
+	}
+	#txt::first-line{
+		text-decoration:underline;
+	}
+	#txt::selection{
+	 	color:red;
+	 	background:#000;
+	}
+</style>
+
+<div id="txt">
+넷플릭스 오리지널로 제작된 국내 드라마가 연이어 글로벌 순위 1위를 기록하면서 '대박'을 터뜨렸다. 최근 공개된 '지금 우리 학교는'(지우학)도 단시간에 전세계 랭킹 1위를 차지하며 K-드라마의 인기를 이어가고 있지만 '오징어게임'(오겜)과 같이 극중 폭력적이고 잔인한 볼거리를 내세워 시청자들의 이목을 이끌었다는 지적도 나온다.
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인 폼</title>
+<style>
+	ul, li{
+		margin: 0;
+		padding: 0px;
+		list-style-type: none;
+	}
+	
+	#log{
+		width: 400px;
+		margin: 0px auto;
+	}
+	
+	#log > h1{
+		text-align: center;
+	}
+	
+	#logFrm > ul > li{
+		float: left;
+		width: 30%;
+		margin-bottom: 10px;
+	}
+	
+	#logFrm > ul > li:nth-child(2n){
+		width: 70%;
+	}
+	
+	#logFrm > ul > li:last-of-type{
+		width: 100%;
+		text-align: center;
+		margin-top: 20px;
+	}
+	
+	#logFrm > ul > li > input{
+		margin-right: 10px;
+	}
+</style>
+<script>
+	function logFormCheck(){
+		var id = document.getElementById("userid");
+		var pwd = document.getElementById("userpwd");
+
+		if(id.value==""){
+			alert("아이디를 입력하세요.");
+			id.focus();
+			return false;
+		}
+		if(pwd.value==""){
+			alert("비밀번호를 입력하세요.");
+			pwd.focus();
+			return false;
+		}
+		return true;
+	}
+</script>
+</head>
+<body>
+<div id="log">
+	<h1>로그인</h1>
+	<hr/>
+	<form method="post" action="login.jsp" id="logFrm" onsubmit="return logFormCheck()">
+		<ul>
+			<li>아이디</li>
+			<li><input type="text" name="userid" id="userid"/></li>
+			<li>비밀번호</li>
+			<li><input type="password" name="userpwd" id="userpwd"/></li>
+			<li>
+				<input type="submit" value="로그인"/>
+				<input type="reset" value="취  소"/>
+			</li>
+		</ul>
+	</form>
+</div>
+</body>
+</html>

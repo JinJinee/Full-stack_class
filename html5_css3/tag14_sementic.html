@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- sementic 태그
+	header : 페이지 상단
+	nav : 링크걸린곳
+	section : 컨텐츠
+	article : 글이 많은 내용
+	aside : 사이드 메뉴
+	footer : 페이지 하단
+ -->
+<style>
+	body, ul, li{margin:0px; padding:0px; list-style-type:none;}
+	/*헤더*/
+	header{
+		height:50px; background:pink;
+	}
+	header li{
+		float:left; height:50px; width:50%; line-height:50px; text-align:center;
+	}
+	/*컨텐츠*/
+	body>section{width:1000px; margin:0 auto; overflow:auto;}
+	body>section>*{float:left;}
+	aside{
+		width:200px;
+	}
+	.content{
+		width:800px;
+	}
+	/*풋터*/
+	footer{
+		height:30px; background:green;
+	}
+</style>
+</head>
+<body>
+<header>
+	<nav>
+		<ul>
+			<li><a href="#">메뉴1</a></li>
+			<li><a href="#">메뉴2</a></li>
+		</ul>
+	</nav>
+</header>
+<section>
+	<aside>
+		<nav>
+			<ul>
+				<li><a href="">aaaa</a></li>
+				<li><a href="">bbbb</a></li>
+				<li><a href="">cccc</a></li>
+			</ul>
+		</nav>
+	</aside>
+	<section class="content">
+		<h1>시맨틱태그</h1>
+		<article>글이 많은 내용</article>
+		<img src="../img/06.jpg"/>
+	</section>
+</section>
+<footer>
+	<nav>고객센터</nav>
+</footer>
+</body>
+</html>

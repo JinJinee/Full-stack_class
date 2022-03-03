@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-sale=1"/>
+<style>
+	body, ul, li{margin:0; padding:0px; list-style-type:none;}
+	img{width:50%;}
+	body{
+		background-color:#ddd;
+	}
+	li{
+		background-color:#fff;
+		border:1px solid gray;
+		margin-top:5px;
+	}
+	/*반응형 스타일 적용하기*/
+	/*320px~600px*/
+	/*     all, screen, print, tv, projection......*/
+	@media all and (min-width:320px) and (max-width:600px){
+		li{background:yellow;}
+		img{width:100%;}
+	}
+	/*601px~900px*/
+	@media all and (min-width:601px) and (max-width:900px){
+		li{background:#000; color:#f00;}
+		img{width:30%;}
+	}
+	/*901px~*/
+	@media all and (min-width:901px){
+		li{background:pink; color:green; font-weight:bold;}
+		img{width:20%;}
+	}
+</style>
+</head>
+<body>
+<ul>
+	<li>오미크론 변이바이러스 확산으로 인해 이달 말 적게는 13만 명에서 많게는 17만 명까지 하루 확진자가 발생할 것으로 전망됨에 따라, 정부는 격리방식과 역학조사, 재택치료 체계를 대량 환자 발생에 맞춘 개편을 실시한다.</li>
+	<li>코로나19 중앙재난안전대책본부(중대본)에 따르면, 기초 역학조사와 격리방식이 개편된다. 확진자가 직접 설문조사 URL 주소에 접속해 접촉자 등을 기입하는 ‘자기기입식 조사서’가 도입된다. 조사항목도 단순화해 역학조사가 이뤄진다.</li>
+	<li>확진자와 공동격리자의 격리방식도 개편된다. 현재 외래진료센터 방문 등 외출 시마다 보건소 신고가 필요하며 신속진료 등이 곤란하다는 지적이 높았다. 앞으로는 지자체 공무원에 의한 GPS 이용 자가격리앱 등 관리 체계가 폐지된다. 복잡하게 운영되던 확진자 동거가족 격리제도도 간소화된다.</li>
+	<li>기존에 확진자 격리 통보와 동거가족 격리 통보를 각각 시행하던 것에서 확진자를 통해 동거가족에게 공동격리(7일) 통보를 하게 된다. 통보를 받으면 격리 해제 후 추가격리 없이 3일간 자율적으로 생활수칙을 준수해야 한다.</li>
+	<li>▲마스크(KF94) 상시착용 ▲고위험군·시설 접촉금지 ▲마스크착용 곤란장소 방문금지 등이 요구된다. 공동격리를 하다 확진되면 다른 가족 추가 격리 없이 당사자만 7일간 격리된다. 격리해제 시 별도 보건소 통보는 진행되지 않는다.</li>
+	<li>또 재택치료 키트는 60세 이상 등 집중관리군 확진자에게 지급하는 등 꼭 필요한 환자 위주로 보급된다. 키트 구성품은 기존 7종에서 ▲해열제 ▲체온계 ▲산소포화도 측정기 ▲세척용 소독제 등 4종으로 줄어든다. 소아용 키트는 부모 요청 등 필요 시 지자체에서 지급하게 되며, 비확진자 대상 키트의 제공은 중단된다.</li>
+</ul>
+<img src="../img/06.jpg"/><img src="../img/05.jpg"/>
+</body>
+</html>

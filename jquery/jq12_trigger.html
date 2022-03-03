@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+	img{
+		width: 100px;
+		height: 150px;
+	}
+</style>
+<script>
+	$(function(){
+		// 이미지에서 클릭이벤트 발생시 처리할 부분
+		var n = 1;
+		$("img").first().on("click", function(){
+			$("body").append("<img src='../javascript/postMovie/m0" + n++ + ".png'/>");
+			if(n>=9)n=1;
+		});
+		
+		// 첫번째 이미지를 자동 이벤트 발생시키기
+		setInterval(function(){
+			//trigger() : 이벤트를 발생시키는 함수
+			$("img:first").trigger('click');
+		}, 1000);
+	});
+</script>
+</head>
+<body>
+<img src="../img/08.jpeg"/>
+
+</body>
+</html>

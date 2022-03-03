@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	//location.href = "http://www.nate.com";
+	//location.href = "ex03_calendar.html";
+	
+	function pageReload(){
+		location.reload(); // 현재페이지를 다시 실행한다.
+		
+	}
+	//setInterval("pageReload()", 1000);
+</script>
+<input type="button" value="포스트슬라이드" onclick="location.href = 'index.html'"/>
+<div>
+	<script>
+		document.write("protocol ->" + location.protocol); // http, ftp
+		document.write("<br/>port ->" + location.port);
+		document.write("<br/>hostname ->" + location.hostname);
+		document.write("<br/>host ->" + location.host);
+		
+	</script>
+</div>
+</body>
+</html>

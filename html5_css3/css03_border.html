@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	img{width:200px; height:300px;}
+	
+	/*
+		border-style : 선의 모양(solid:실선, dotted:점선, dashed:줄선, double:이중선, none, groove:홈, inset:블록) 
+		border-width : 선의 두께(px)
+		border-color : 선의 색상(rgb)
+	*/
+	
+	#i1{
+		border-style:solid; /*border-top-style, border-right-style, border-bottom-style, border-left-style*/
+		border-width:5px;
+		border-color:black;
+	}
+	
+	#i2{
+		border-bottom:10px green double;
+	}
+	
+	#i3{
+		border:dashed 5px orange;
+	}
+	
+	#i4{
+		border:5px solid;
+		border-color:yellow;
+		border-radius:50px 30px; /*둥근모양의 사각형*/
+	}
+	
+</style>
+</head>
+<body>
+<img src="../img/01.jpeg" id="i1"/>
+<img src="../img/02.jpeg" id="i2"/>
+<img src="../img/05.jpeg" id="i3"/>
+<img src="../img/06.jpeg" id="i4"/>
+
+</body>
+</html>

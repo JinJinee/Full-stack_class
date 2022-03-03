@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function(){
+		// console.log( $("div:last").css("font-size"));
+		// 버튼의 이벤트 처리
+		$("button").on('click', function(){
+			// 버튼의 index를 구하여 0 : 점점작게, 1 : 기본크기(16px), 2 : 점점크게
+			var idx = $("button").index(this);
+			
+			// 현재 글자 크기
+			var size = parseFloat($("div:last").css("font-size"));
+			if(idx==0){ //점점작게
+				size -= 0.5; 
+			} else if(idx==1){ //기본크기
+				size = 16;
+			} else if(idx==2){ //점점크게
+				size++;
+			}
+			$("div").last().css("font-size", size+"px");
+			
+			
+		});
+	});
+</script>
+
+</head>
+<body>
+<div>
+	<button>-</button>
+	<button>0</button>
+	<button>+</button>
+
+</div>
+<div>
+오는 17일부터 코로나 자가 검사 키트의 온라인 판매가 금지되는 가운데, 편의점에서 간편하게 자가 검사 키트를 살 수 있게 됐다. 기존에는 의료 기기 판매업 신고를 한 일부 편의점에서만 판매했지만, 식약처가 한시적으로 규정을 바꿔 15일부터 다음 달 5일까지는 모든 편의점 점포에서 팔 수 있게 허용했다.
+모든 편의점에서 1명당 1회 구입 수량은 5개로 제한된다. 다만 한 사람이 여러 곳을 돌아다니며 여러 번 사는 데는 제약이 없다. 가격은 개당 6000원이다. 약국에서도 구매 가능하다.
+CU와 GS25는 15일부터 판매를 시작했다. CU는 래피젠 자가 검사 키트 100만개를 확보해 이날부터 한 점포당 20개씩 공급하고 있다. 이번 주 안으로 휴마시스 제품도 추가할 예정이다. GS25는 래피젠 제품 80만개를 확보해 15일과 16일 이틀간 전국 매장에 각각 20개씩 공급한다.
+세븐일레븐과 이마트24, 미니스톱은 17일부터 판매에 나선다. 각각 100만개, 50만개, 13만개의 물량을 확보했다. CU와 GS25, 세븐일레븐은 자체 모바일 앱에서 실시간으로 점포별 재고 수량을 확인할 수 있게 할 예정이다.
+
+</div>
+</body>
+</html>

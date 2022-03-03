@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body,ul,li,section{
+		margin:0; 
+		padding:0; 
+		list-style-type:none;
+	}
+	a:link, a:visited{
+		text-decoration:none; 
+		color:#222;
+	}
+	a:hover{
+		text-decoration:none; 
+		color:#222; 
+		font-weight:bold;
+	}
+	header, nav, section{
+		margin:0 auto;
+	}
+	/*로고*/
+	header{
+		width:800px; 
+		height:150px; 
+		font-size:3em; 
+		text-align:center; 
+		line-height:150px;
+	}
+	/*메뉴*/
+	#menu{
+		height:50px;
+		border-top:2px solid #222;
+		background:powderblue;
+	}
+	#menu>nav>ul>li{
+		float:left;
+		width:20%;
+	}
+	nav{
+		width:800px;
+	}
+	#menu>nav>ul{
+		height:50px;
+	}
+	#menu>nav>ul>li>ul{
+		display:none;
+		position:relative;
+		background:white;
+	}
+	#menu li{
+		height:50px;
+		line-height:50px;
+		text-align:center;
+	}
+	/*메인컨텐츠*/
+	section{
+		width:800px;
+	}
+</style>
+<script>
+	//메뉴에 마우스오버가 발생하면 호출할 함수
+	function menuOver(n){
+		document.getElementById('s' + n).style.display = 'block';
+		
+	}
+	//메뉴에 마우스아웃시 호출하는 함수
+	function menuOut(n){
+		document.getElementById('s' + n).style.display = 'none';
+	}
+</script>
+</head>
+<body>
+<!-- 로고 -->
+<header>GIRLSDAILY</header>
+<!-- 메뉴 -->
+<div id="menu">
+	<nav>
+		<ul>
+			<li onmouseenter="menuOver(1)" onmouseleave="menuOut(1)" >
+				<a href="javascript:history.back()">OUTER</a>
+				<!-- 서브메뉴 -->
+				<ul id="s1">
+					<li><a href="#">가디건</a></li>
+					<li><a href="#">자켓 & 점퍼</a></li>
+					<li><a href="#">베스트</a></li>
+					<li><a href="#">코트</a></li>
+					<li><a href="#">세일</a></li>
+				</ul>
+			</li>
+			<li onmouseenter="menuOver(2)" onmouseleave="menuOut(2)">
+				<a href="javascript:history.go(-2)">TOP</a>
+				<!-- 서브메뉴 -->
+				<ul id="s2">
+					<li><a href="#">Tee</a></li>
+					<li><a href="#">Cami</a></li>
+					<li><a href="#">Knit</a></li>
+					<li><a href="#">Shirt & Blouse</a></li>
+				</ul>
+			</li>
+			<li onmouseenter="menuOver(3)" onmouseleave="menuOut(3)">
+				<a href="#">DRESS</a>
+				<!-- 서브메뉴 -->
+				<ul id="s3">
+					<li><a href="#">All</a></li>
+					<li><a href="#">바캉스룩</a></li>
+					<li><a href="#">Set</a></li>
+				</ul>
+			</li>
+			<li onmouseenter="menuOver(4)" onmouseleave="menuOut(4)">
+				<a href="#">BOTTOM</a>
+				<!-- 서브메뉴 -->
+				<ul id="s4">
+					<li><a href="#">레깅스</a></li>
+					<li><a href="#">힐링투엘브</a></li>
+					<li><a href="#">히든벤딩시리즈</a></li>
+					<li><a href="#">스커트</a></li>
+					<li><a href="#">팬츠</a></li>
+				</ul>
+			</li>
+			<li onmouseenter="menuOver(5)" onmouseleave="menuOut(5)">
+				<a href="#">SUMMER</a>
+				<!-- 서브메뉴 -->
+				<ul id="s5">
+					<li><a href="#">HOLI스윔웨어</a></li>
+					<li><a href="#">at 22°C</a></li>
+					<li><a href="#">바캉스룩</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</div><!--  메뉴 -->
+<section>
+	<iframe src="index.html" frameborder="0" width="800px" height="164px" scrolling="no" marginwidth="0" marginheight="0"></iframe>
+</section>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div{
+		width:300px; height:300px; border:1px solid gray;
+	}
+	/* visibility : hidden(숨김), visible(보여주기) -> 화면에서 숨겨지면 공간을 차지한다. */
+	div:first-child{
+		background:yellow;
+		visibility:visible;
+	}
+	/* display : block(보여주기), none(숨김) -> 화면에서 숨겨지면 공간을 반납한다. */
+	div:nth-child(2){
+		background:pink;
+		display:block;
+	}
+	div:last-child{
+		background:orange;
+	}
+</style>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>

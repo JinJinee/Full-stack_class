@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body{
+		background-image:url(../img/07.jpg);
+		background-size:100% 400px;
+	}
+</style>
+<script>
+	function setPopCookie(){
+		//체크박스가 체크상태일 때 쿠키를 저장한다.
+		if(document.getElementById("cookieChk").checked = true) { // 체크일때 true, 체크상태 아닐때 false
+			//변수=값;path=/;expires=날짜
+			var now = new Date(); //오늘날짜
+			now.setDate(now.getDate()+7);
+			var cookieData = "popup=yes;path=/;expires=" + now + ";";
+			console.log(cookieData);
+			document.cookie = cookieData;
+			document.cookie = "notice=ok;path=/;exprires=" + now + ";";
+		}
+		self.close(); //window.close();
+	}
+</script>
+</head>
+<body>
+<input type="checkbox" name="cookieChk" id="cookieChk"/>일주일동안 안보이기
+<input type="button" value="Close" onclick="setPopCookie()"/>
+</body>
+</html>

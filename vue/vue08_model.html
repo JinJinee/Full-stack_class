@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<title>Vue</title>
+</head>
+<body>
+    <p>
+        v-model: -> html 폼에 입력한 데이터를 뷰의 데이터 객체에 바로 동기화 시킨다. <br>
+                    input, textarea, select 태그에서 사용가능
+    </p>
+    <div id="app">
+        <h1>값을 입력하면 바로 적용됨</h1>
+        <input type="text" v-model:name="userid"><br>
+        <p>입력한 아이디는 : {{userid}}</p>
+        
+        <hr>
+        <!-- checkbox : 여러개의 데이터를 선택할 수 있다. -->
+        <input type="checkbox" value="마라톤" v-model:name="hobby">마라톤
+        <input type="checkbox" value="달리기" v-model:name="hobby">달리기
+        <input type="checkbox" value="걷기" v-model:name="hobby">걷기
+        <input type="checkbox" value="허들" v-model:name="hobby">허들
+        <input type="checkbox" value="100m" v-model:name="hobby">100m
+        <p>선택한 취미는 : {{hobby}}</p>
+        
+        <hr>
+        <!-- radio -->
+        <input type="radio" v-model:name="fruit" value="apple">사과
+        <input type="radio" v-model:name="fruit" value="banana">바나나
+        <input type="radio" v-model:name="fruit" value="pineapple">파인애플
+        <input type="radio" v-model:name="fruit" value="peach">복숭아
+        <p>내가 좋아하는 과일은 : {{fruit}}</p>
+
+        <hr>
+        <!-- select -->
+        <select v-model:name="country" multiple size="6">
+            <option value="" disabled>나라를 선택하세요.</option>
+            <option value="대한민국">대한민국</option>
+            <option value="캐나다">캐나다</option>
+            <option value="오스트리아">오스트리아</option>
+            <option value="스페인">스페인</option>
+            <option value="뉴질랜드">뉴질랜드</option>
+        </select>
+        <p>가보고 싶은 나라는 : {{country}}</p>
+        
+        <hr>
+        <textarea v-model:name="content"></textarea>
+        <p>내소개 : {{content}}</p>
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data(){
+                return {
+                    userid:'',
+                    hobby:[],    // 여러개의 데이터처리를 위하여 배열을 선언
+                    fruit:'',
+                    country: ['스페인', '캐나다'],   // 초기값이 ''일 경우 내용이 없는 목록이 보임
+                    content:''
+
+                }
+            }
+        });
+    </script>
+</html>

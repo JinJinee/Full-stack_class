@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 
+	https://github.com/alaingoga에서 다운로드
+	
+	1. accordionImageMenu.css
+	2. jquery
+	3. jquery-ui
+	4. accordionImageMenu.js
+ -->
+<link rel="stylesheet" href="css/accordionImageMenu.css" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../jquery-ui.min.js"></script>
+<script src="js/jquery.accordionImageMenu.min.js"></script>
+<script>
+	$(function(){
+		$("#acco").AccordionImageMenu({
+			position: 'horizontal' // 'horizontal', 'vertical'
+			, openItem: 3   // 기본선택목록, index 위치의 목록을 크게 봄
+			, openDim: 500  // 확장된 목록의 크기
+			, closeDim: 200 
+			, height: 600
+			, duration: 3000  // 전환속도
+			, effect: "easeOutBounce"
+			, border: 20
+			, color: 'white'
+			
+		});
+	});
+	
+	
+</script>
+
+</head>
+<body>
+<ul id="acco">
+	<li><a href="https://nate.com"><img src="../../img/flog.png" title="네이트 홈페이지!!"/></a></li>
+	<li><a href="https://naver.com"><img src="../../img/08.jpeg" title="naver.com~~~~"/></a></li>
+	<li><a href="https://daum.net"><img src="../../img/03.jpeg" title="다음 홈페이지@@@@@"/></a></li>
+	<li><a href="../jqEx06_listCheck.html"><img src="../../img/05.jpg" title="목록......"/></a></li>
+	<li><a href="https://nate.com"><img src="../../img/06.jpg" title="목록......"/></a></li>
+	<li><a href="https://nate.com"><img src="../../img/07.jpg" title="목록......"/></a></li>
+	<li><a href="https://nate.com"><img src="../../img/fashion.jpg" title="목록......"/></a></li>
+</ul>
+
+</body>
+</html>

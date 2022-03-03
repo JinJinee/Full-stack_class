@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body,ul,li{
+		margin:0; padding:0; list-style-type:none;
+	}
+	#main{
+		width:600px; margin:30px auto; text-align:center;
+	}
+	#main>h1{
+		padding:20px;
+	}
+	#category>li{
+		float:left; width:20%; margin-bottom:10px;
+	}
+	a{
+		color:black; text-decoration:none;
+	}
+	img{
+		width:600px;
+	}
+	#outerList, #topList, #dressList, #bottomList, #summerList{
+		display:none;
+	}
+	#category>li>a:hover{
+		font-weight:bold;
+	}
+	#category>li:hover>ul{
+		display:block;
+	}
+	#category>li>ul>li{
+		padding:5px;
+	}
+	#category>li>ul>li:hover{
+		font-weight:bold;
+	}
+</style>
+<script>
+
+</script>
+</head>
+<body>
+<div id="main">
+	<h1>GIRLSDAILY</h1>
+	<hr/>
+	<div>
+		<ul id="category">
+			<li>
+				<a href="#">OUTER</a>
+				<ul id="outerList">
+					<li><a href="#">가디건</a></li>
+					<li><a href="#">자켓 & 점퍼</a></li>
+					<li><a href="#">베스트</a></li>
+					<li><a href="#">코트</a></li>
+					<li><a href="#">세일</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">TOP</a>
+				<ul id="topList">
+					<li><a href="#">Tee</a></li>
+					<li><a href="#">Cami</a></li>
+					<li><a href="#">Knit</a></li>
+					<li><a href="#">Shirt & Blouse</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">DRESS</a>
+				<ul id="dressList">
+					<li><a href="#">All</a></li>
+					<li><a href="#">바캉스룩</a></li>
+					<li><a href="#">Set</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">BOTTOM</a>
+				<ul id="bottomList">
+					<li><a href="#">레깅스</a></li>
+					<li><a href="#">힐링투열브</a></li>
+					<li><a href="#">히든벤딩시리즈</a></li>
+					<li><a href="#">스커트</a></li>
+					<li><a href="#">팬츠</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">SUMMER</a>
+				<ul id="summerList">
+					<li><a href="#">HOLI스윔웨어</a></li>
+					<li><a href="#">at 22°C</a></li>
+					<li><a href="#">바캉스룩</a></li>
+				</ul>
+			</li>			
+		</ul>	
+	</div>
+	<img src="../img/fashion.jpg"/>
+</div>
+</body>
+</html>

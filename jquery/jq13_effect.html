@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+	$(function(){
+		$("#hide").click(function(){
+			// 사라지는 시간 : "slow", "fast", "normal", 밀리초
+			$("#i").hide(3000);
+		});
+		
+		$("#show").click(function(){
+			$("#i").show("slow");
+		});
+		
+		$("#toggle").click(function(){
+			$("#i").toggle(3000);
+		});
+		
+		// fadeIn() : 점점 진하게
+		// fadeOut() : 점점 흐리게
+		// fadeToggle()
+		$("#fadeIn").click(function(){
+			// 사라지는 시간 : "slow", "fast", "normal", 밀리초
+			$("#i").fadeIn(3000);
+		});
+		
+		$("#fadeOut").click(function(){
+			// 사라지는 시간 : "slow", "fast", "normal", 밀리초
+			$("#i").fadeOut(3000);
+		});
+		
+		$("#fadeToggle").click(function(){
+			// 사라지는 시간 : "slow", "fast", "normal", 밀리초
+			$("#i").fadeToggle(3000);
+		});
+		
+		// slideUp() : 슬라이드 모양으로 줄어듬
+		// slideDown() 
+		// slideToggle()
+		$("#slideUp").click(function(){
+			// 사라지는 시간 : "slow", "fast", "normal", 밀리초
+			$("#i").slideUp(3000);
+		});
+		
+		$("#slideDown").click(function(){
+			// 사라지는 시간 : "slow", "fast", "normal", 밀리초
+			$("#i").slideDown(3000);
+		});
+		
+		$("#slideToggle").click(function(){
+			// 사라지는 시간 : "slow", "fast", "normal", 밀리초
+			$("#i").slideToggle(3000);
+		});
+		
+	});
+</script>
+</head>
+<body>
+<div>
+	<button id="hide">숨기기(hidden)</button>
+	<button id="show">보여주기(show)</button>
+	<button id="toggle">toggle(hidden,show)</button>
+	
+	<button id="fadeIn">점점 진하게(fadeIn)</button>
+	<button id="fadeOut">점점 흐리게(fadeOut)</button>
+	<button id="fadeToggle">fadeToggle(fadeIn,fadeOut)</button>
+	
+	<button id="slideUp">숨기기(slideUp)</button>
+	<button id="slideDown">보여주기(slideDown)</button>
+	<button id="slideToggle">slideToggle(slidUp,slideDown)</button>
+	
+	<hr/>
+	
+	<img src="../img/08.jpeg" id="i"/>
+	<img src="../img/m01.png"/>
+</div>
+</body>
+</html>

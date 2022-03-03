@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/* 
+		동위선택자
+		: 기준이 되는 선택자와 같은 위치에 있는 태그를 선택한다.
+		
+		+ : 선택자의 다음객체를 선택한다.
+		~ : 선택자의 다음에 있는 모든객체
+	*/
+	h1+h2{
+		background:pink;
+	}
+	h1~h2{
+		color:blue;
+	}
+	/*상태선택자
+		focus : 커서가 컴퍼넌트를 선택하면
+	*/
+	#username:focus{
+	color:orange; font-size:1.5em}
+	/* disabled : 비활성화된 컴퍼넌트에 적용한다. */
+	input:disabled{
+		border:2px solid red;
+	}
+	/* checked : 컴퍼넌트가 checked일 때 적용 */
+	input:checked{
+		width:50px; 
+		height:50px;
+	}
+	/* enabled : 컴퍼넌트가 활성화일 때 */
+</style>
+</head>
+<body>
+<form>
+	이름 <input type="text" name="uesrname" id="username" value="hong gildong" readonly/><br/>
+	아이디 <input type="text" name="userid" id="userid" value="gildong" disabled/><br/>
+	관심 <input type="checkbox" name="interest"/> 축구
+		<input type="checkbox" name="interest"/> 농구
+		<input type="checkbox" name="interest"/> 야구
+		<input type="checkbox" name="interest"/> 배구 
+		<br/>
+	취미 <input type="radio" name="hobby"/> 영화감상
+		<input type="radio" name="hobby"/> 등산
+		<input type="radio" name="hobby"/> 맛집탐방
+		<input type="radio" name="hobby"/> 영화보기
+</form>
+<h1>동위선택자 테스트 111111</h1>
+<h2>동위선택자 테스트 222222</h2>
+<h2>동위선택자 테스트 333333</h2>
+<h2>동위선택자 테스트 444444</h2>
+<h2>동위선택자 테스트 555555</h2>
+<h2>동위선택자 테스트 666666</h2>
+<h3>~~~~~~~~~~~~~~~~~~~~~~~~</h3>
+<h1>동위선택자 테스트 AAAAAA</h1>
+<h2>동위선택자 테스트 BBBBBB</h2>
+<h2>동위선택자 테스트 CCCCCC</h2>
+<h2>동위선택자 테스트 DDDDDD</h2>
+<h2>동위선택자 테스트 EEEEEE</h2>
+<h2>동위선택자 테스트 FFFFFF</h2>
+<h3>~~~~~~~~~~~~~~~~~~~~~~~~</h3>
+</body>
+</html>

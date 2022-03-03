@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+	ul, li{margin:0; padding:0; list-style-type:none;}
+	li{float:left; border:1px solid gray;}
+	li, img{width:100px; height:100px;}
+</style>
+<script>
+	$(function(){
+		// html() : 객체에 html 태그를 추가하거나 객체를 가져올 수 있다.
+		$("#obj").html("<a href='http://www.daum.net'>다음</a>으로 이동하기");
+		
+		// 선택자 내의 태그를 얻어오기
+		var tag = $("obj").html();
+		console.log(tag);
+		
+		// text() : 선택자 객체내의 내용을 문자로 추가하거나 얻어올 수 있다.
+		$("#obj2").text("<i>text를 객체에 추가하기</i>") // i태그를 텍스트로 처리한다.
+		var tag2 = $("obj2").text();
+		
+		console.log(tag2);
+		
+		$("body").html(""); // body태그의 내용이 모두 지워짐
+		
+		tag = "<ul><li id='i'><img src='../img/08.jpeg'/></li></ul>";
+		$("body").html(tag);
+		
+		// before() : 선택자이전에 객체 추가
+		// 선택자              내용
+		$("#i").before("<li><img src='../img/07.jpg'/></li>");
+		
+		// insertBefore() : 선택자 이전에 객체 추가
+		// 내용                                                선택자
+		$("<li><img src='../img/06.jpg'/></li>").insertBefore("#i");
+		
+		// after() : 선택자 다음에 객체 추가
+		$("#i").after("<li><img src='../img/05.jpg'/></li>");
+		
+		// insertAfer() : 선택자 다음에 객체 추가
+		$("<li id='p2'>IMAGE</li>").insertAfter("#i");
+		
+		//    $("ul").html("<h1>텍스트</h1>")
+		
+		// append() : 선택자의 마지막 내용으로 추가
+		$("ul").append("<li><img src='../img/04.jpeg'/></li>");
+		
+		// appendTo() : 선택자의 마지막에 내용으로 추가
+		$("<li id='p'><img src='../img/m01.png'/></li>").appendTo("ul");
+		
+		// prepend() : 선택자의 내용 중 제일 앞에 추가
+		$('ul').prepend("<li><img src='../img/02.jpeg'/></li>");
+		
+		// prependTo() : 선택자의 내용 중 제일 앞에 추가
+		$("<li'><img src='../img/01.jpeg'/></li>").prependTo("ul");
+		
+		// clone() : 객체를 복사한다.
+		var copyLi = $("ul>li").eq(3).clone(); // 복사 ul의 li 중에 index가 3번인 li를 복사하라.
+		$("ul").append(copyLi);
+		
+		// empty : 선택자의 내용을 지우기
+		$("#p").empty();
+
+		// remove() : 선택자를 포함하여 지우기
+		$("#p2").remove();
+		
+		// replaceAll() : 선택자 객체를 치환
+		$("<li>ReplaceAll</li>").replaceAll("li:last");
+		
+		// replaceWith() : 
+		$("li:first").replaceWith("<li>ReplaceWith</li>");
+	});
+</script>
+</head>
+<body>
+<h1	id="obj">객체조작1</h1>
+<h2	id="obj2">객체조작2</h2>
+
+</body>
+</html>
