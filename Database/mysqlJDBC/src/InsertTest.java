@@ -21,7 +21,7 @@ public class InsertTest {
 			
 			// 2. DB 연결
 			//    										 server/dbname
-			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1/demo", "root", "tls97486");
+			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1/demo", "root", "root1234");
 			
 			// 3. preparedStatement 객체 생성 : 쿼리문을 이용
 			// 사원번호 : 5555, 이름 : kim, 급여 : 4500, 입사일 : 현재 날짜와 시간으로 설정

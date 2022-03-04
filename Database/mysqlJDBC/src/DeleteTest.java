@@ -22,7 +22,7 @@ public class DeleteTest {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
 			// 2.
-			conn = DriverManager.getConnection("jdbc:mysql://localhost/demo","root","tls97486");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost/demo","root","root1234");
 			
 			// 3.
 			String sql = "delete from emp where empno=?";

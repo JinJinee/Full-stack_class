@@ -26,7 +26,7 @@ public class MysqlConnection {
 	public void getConn() {
 		String url = "jdbc:mysql://localhost/mydb";
 		String id = "root";
-		String password = "tls97486";
+		String password = "root1234";
 		try {
 			conn = DriverManager.getConnection(url, id, password);
 		} catch(Exception e) {

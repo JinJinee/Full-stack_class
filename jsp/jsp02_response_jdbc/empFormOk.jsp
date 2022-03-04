@@ -12,7 +12,7 @@
 		Connection con = null;
 		try{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1/demo","root","tls97486");
+			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1/demo","root","root1234");
 		} catch(Exception e){
 			System.out.println("DB연결 에러 발생...");
 			e.printStackTrace();

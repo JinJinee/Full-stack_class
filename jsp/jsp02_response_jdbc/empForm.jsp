@@ -11,7 +11,7 @@
 		Connection con = null;
 		try{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1/demo","root","tls97486");
+			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1/demo","root","root1234");
 		} catch(Exception e){
 			System.out.println("DB연결 에러 발생...");
 			e.printStackTrace();
@@ -38,8 +38,8 @@
 <!--      						/webJSP
  -->
 <form method="post" action="<%=request.getContextPath()%>/jsp02_response_jdbc/empFormOk.jsp">
-	사원번호 : <input type="text" name="empno"><br>
-	사원명 : <input type="text" name="ename"><br>	
+	사원번호 : <input type="text" name="empno" value="${param.no}"><br>
+	사원명 : <input type="text" name="ename" value="${param.name}"><br>	
 	부서코드 : 
 		<select name="deptno">
 			<%while(rs.next()){ %>

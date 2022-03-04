@@ -28,7 +28,7 @@ public class SelectTest {
 			// 							   서버ip/db명
 			String url = "jdbc:mysql://127.0.0.1/demo";
 			// 							   		서버주소, 계정, 비번
-			conn = DriverManager.getConnection(url, "root", "tls97486");
+			conn = DriverManager.getConnection(url, "root", "root1234");
 			
 			// 3. preparedStatement 객체 생성
 			// 쿼리문 - 레코드선택(select)

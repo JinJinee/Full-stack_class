@@ -25,7 +25,7 @@ public class UpdateTest {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
 			// 2. DB연동
-			conn = DriverManager.getConnection("jdbc:mysql://localhost/demo","root","tls97486");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost/demo","root","root1234");
 			
 			// 3. 쿼리문을 이용해  
 			String sql = "update emp set sal=? where empno=?";
